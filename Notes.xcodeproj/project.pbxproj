@@ -15,6 +15,8 @@
 		8657BF0B27453138009CA668 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF0A27453138009CA668 /* ComplicationController.swift */; };
 		8657BF0D27453139009CA668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8657BF0C27453139009CA668 /* Assets.xcassets */; };
 		8657BF1027453139009CA668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8657BF0F27453139009CA668 /* Preview Assets.xcassets */; };
+		8657BF23274536F8009CA668 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF22274536F8009CA668 /* Note.swift */; };
+		8657BF252745374B009CA668 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF242745374B009CA668 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		8657BF0C27453139009CA668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8657BF0F27453139009CA668 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8657BF1127453139009CA668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8657BF22274536F8009CA668 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8657BF242745374B009CA668 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +117,14 @@
 		8657BF0527453137009CA668 /* Notes WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8657BF0627453137009CA668 /* ContentView.swift */,
-				8657BF0827453138009CA668 /* NotesApp.swift */,
-				8657BF0A27453138009CA668 /* ComplicationController.swift */,
-				8657BF0C27453139009CA668 /* Assets.xcassets */,
 				8657BF1127453139009CA668 /* Info.plist */,
+				8657BF0A27453138009CA668 /* ComplicationController.swift */,
+				8657BF0827453138009CA668 /* NotesApp.swift */,
+				8657BF0C27453139009CA668 /* Assets.xcassets */,
+				8657BF20274536A4009CA668 /* Component */,
+				8657BF21274536AE009CA668 /* Model */,
 				8657BF0E27453139009CA668 /* Preview Content */,
+				8657BF1F2745369A009CA668 /* View */,
 			);
 			path = "Notes WatchKit Extension";
 			sourceTree = "<group>";
@@ -129,6 +135,30 @@
 				8657BF0F27453139009CA668 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8657BF1F2745369A009CA668 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8657BF0627453137009CA668 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8657BF20274536A4009CA668 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8657BF242745374B009CA668 /* HeaderView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8657BF21274536AE009CA668 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8657BF22274536F8009CA668 /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8657BF0727453138009CA668 /* ContentView.swift in Sources */,
+				8657BF23274536F8009CA668 /* Note.swift in Sources */,
 				8657BF0927453138009CA668 /* NotesApp.swift in Sources */,
 				8657BF0B27453138009CA668 /* ComplicationController.swift in Sources */,
+				8657BF252745374B009CA668 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
