@@ -20,7 +20,7 @@ struct CreditsView: View {
             Image(randomImage)
                 .resizable()
                 .scaledToFit()
-            .layoutPriority(1)
+                .layoutPriority(1)
 
             HeaderView(title: "Credits")
 

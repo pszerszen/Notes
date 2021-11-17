@@ -19,6 +19,7 @@
 		8657BF252745374B009CA668 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF242745374B009CA668 /* HeaderView.swift */; };
 		8657BF27274538FB009CA668 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF26274538FB009CA668 /* CreditsView.swift */; };
 		8657BF2927453A7C009CA668 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF2827453A7C009CA668 /* SettingsView.swift */; };
+		8657BF2B27453C57009CA668 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657BF2A27453C57009CA668 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		8657BF242745374B009CA668 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8657BF26274538FB009CA668 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		8657BF2827453A7C009CA668 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8657BF2A27453C57009CA668 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				8657BF0627453137009CA668 /* ContentView.swift */,
 				8657BF26274538FB009CA668 /* CreditsView.swift */,
+				8657BF2A27453C57009CA668 /* DetailView.swift */,
 				8657BF2827453A7C009CA668 /* SettingsView.swift */,
 			);
 			path = View;
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8657BF2927453A7C009CA668 /* SettingsView.swift in Sources */,
+				8657BF2B27453C57009CA668 /* DetailView.swift in Sources */,
 				8657BF0727453138009CA668 /* ContentView.swift in Sources */,
 				8657BF23274536F8009CA668 /* Note.swift in Sources */,
 				8657BF0927453138009CA668 /* NotesApp.swift in Sources */,
