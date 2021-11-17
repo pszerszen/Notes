@@ -12,29 +12,13 @@ struct ContentView: View {
     @AppStorage(Constants.lineCount) var lineCount = 1
 
     @State private var notes = [Note]()
-    @State private var text = ""
 
     var body: some View {
         VStack {
-            HStack(alignment: .center, spacing: 6.0) {
-                TextField("Add New Note", text: $text)
-
-                Button {
-                    guard !text.isEmpty else {return}
-                    notes.append(Note(id: UUID(), text: text))
-                    save()
-
-                    text = ""
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .font(.system(size: 42, weight: .semibold))
-                }
-                .fixedSize()
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-
+            NewItemView { text in
+                notes.append(Note(id: UUID(), text: text))
+                save()
             }
-            Spacer()
 
             if notes.count >= 1 {
                 List {
@@ -42,14 +26,7 @@ struct ContentView: View {
                         NavigationLink {
                             DetailView(note: notes[i], count: notes.count, index: i)
                         } label: {
-                            HStack {
-                                Capsule()
-                                    .frame(width: 4)
-                                    .foregroundColor(.accentColor)
-                                Text(notes[i].text)
-                                    .lineLimit(lineCount)
-                                    .padding(.leading, 5.0)
-                            }
+                            NoteLabel(text: notes[i].text)
                         }
                     }
                     .onDelete(perform: delete)
