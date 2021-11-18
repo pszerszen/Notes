@@ -39,7 +39,7 @@ struct DetailView: View {
                         SettingsView()
                     }
                 Spacer()
-                Text("\(count) / \(index + 1)")
+                Text("\(index + 1) / \(count)")
                 Spacer()
                 Image(systemName: "info.circle")
                     .imageScale(.large)

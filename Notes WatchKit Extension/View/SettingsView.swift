@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
 
     @AppStorage(Constants.lineCount) var lineCount = 1
-    @State private var value: Float = 1.0
 
     var body: some View {
         VStack(spacing: 8.0) {
@@ -20,17 +19,12 @@ struct SettingsView: View {
                 .fontWeight(.bold)
 
             Slider(value: Binding(get: {
-                self.value
+                return Double(lineCount)
             }, set: { newValue in
-                self.value = newValue
-                self.update()
+                lineCount = Int(newValue)
             }), in: 1...4, step: 1)
                 .tint(.accentColor)
         }
-    }
-
-    private func update() {
-        lineCount = Int(value)
     }
 }
 

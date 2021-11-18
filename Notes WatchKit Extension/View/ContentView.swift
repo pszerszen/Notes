@@ -15,10 +15,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            NewItemView { text in
-                notes.append(Note(id: UUID(), text: text))
-                save()
-            }
+            NewItemView(saveAction: save)
 
             if notes.count >= 1 {
                 List {
@@ -47,7 +44,10 @@ struct ContentView: View {
     }
 
 
-    private func save() {
+    private func save(_ input: String?) {
+        if let input = input {
+            notes.append(Note(id: UUID(), text: input))
+        }
         do {
             let data = try JSONEncoder().encode(notes)
             let url = getDocumentDirectory().appendingPathComponent(Constants.notes)
@@ -71,7 +71,7 @@ struct ContentView: View {
     private func delete(offsets: IndexSet) {
         withAnimation {
             notes.remove(atOffsets: offsets)
-            save()
+            save(nil)
         }
     }
 
